@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import handleClick from './assets/component/function/function/test'
+import SingleProduct from '../SingleProduct/SingleProduct';
 function App() {
 
 const [name, setName] = useState("Gias");
@@ -64,7 +65,7 @@ const handleChange = () => {
 
   return (
     <>
-      {/* <button onClick={handleChange}>Handle name change</button> */}
+      <button onClick={handleChange}>Handle name change</button>
 
 
       <h1>Main App js</h1>
@@ -78,9 +79,9 @@ const handleChange = () => {
 
 
    {
-products.map((item) => {
-
-})}
+products.map((item) =>(
+ <SingleProduct product={"gias"}></SingleProduct>
+))}
     </>
   );
 }
